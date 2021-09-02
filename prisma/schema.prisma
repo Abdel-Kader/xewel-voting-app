@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["groupBy"]
+}
+
+model User {
+    id Int @id @default(autoincrement())
+    nom String
+    type Int
+    dateSeance String
+    createdAt DateTime @default(now())
+}
+
+model Voting {
+    id Int @id @default(autoincrement())
+    nom String
+    type Int
+    voix Int
+    ip String
+    dateSeance String
+    createdAt DateTime @default(now())
+}
