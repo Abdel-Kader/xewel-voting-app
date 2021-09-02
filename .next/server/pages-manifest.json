@@ -1,18 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/admin": "pages/admin.html",
-  "/admin/result_evaluateur": "pages/admin/result_evaluateur.html",
-  "/admin/result_improvisation": "pages/admin/result_improvisation.html",
-  "/admin/result_orateur": "pages/admin/result_orateur.html",
-  "/api/hello": "pages/api/hello.js",
-  "/api/users/create": "pages/api/users/create.js",
-  "/api/users": "pages/api/users.js",
-  "/api/users/result": "pages/api/users/result.js",
-  "/api/users/vote": "pages/api/users/vote.js",
-  "/evaluation": "pages/evaluation.html",
-  "/improvisation": "pages/improvisation.html",
-  "/": "pages/index.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/": "pages/index.js"
 }
