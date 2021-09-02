@@ -52,7 +52,7 @@ export default function AjoutOrateur() {
         <div className="md:container flex justify-center">
             <div className="w-full md:w-1/3 lg:w-1/3">
                 <div className="text-center">
-                    <Image src="/../public/logo.jpg" width={200} height={200}/>
+                    <Image src="/logo.jpg" width={200} height={200}/>
                 </div>
                 <div className="border-2 w-full p-4">
                     <h1 className="text-xl h-16"><strong>Note : </strong>Ajout d'un orateur</h1>
