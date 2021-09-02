@@ -83,7 +83,7 @@ export default function Home() {
 			<div className="md:container flex justify-center">
 				<div className="sm:w-full md:w-5/12 lg:w-5/12">
 					<div className="text-center">
-						<Image src="/../public/logo.jpg" width={200} height={200}/>
+						<Image src="/logo.jpg" width={200} height={200}/>
 					</div>
 					<div className="border-2 p-4" style={{marginBottom: 50}}>
 
