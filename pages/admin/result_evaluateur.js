@@ -16,6 +16,7 @@ export default function Result_Evaluateur() {
 
     async function getOrateurs() {
         const response = await fetch("/api/users/result?type=2");
+        console.log(response)
         if(response.ok) {
             if (response.status === 204) {
 
@@ -52,7 +53,10 @@ export default function Result_Evaluateur() {
         <>
             <AdminNav/>
             <div className="flex justify-center">
-                <h3>Nombre total de votants :</h3>
+                <h2 style={{textAlign: 'center'}}>Nombre total de votants :</h2>
+                <br/>
+                <br/>
+                <br/>
                 <div style={{
                     width: 900,
                     display: 'flex',
