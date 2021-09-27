@@ -53,10 +53,11 @@ export default function Result_Evaluateur() {
             <AdminNav/>
             <div className="flex justify-center">
                 <div style={{width:900, display: 'flex', justifyContent: 'center', alignItems: 'center', alignContent: 'center'}}>
+                    <h3>Nombre total de votants :</h3>
                     <Bar
                         data={data}
                         options={{
-                            responsive:true,
+                            responsive: true,
                             label: false,
                         }}
                     />
