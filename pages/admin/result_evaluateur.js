@@ -21,8 +21,8 @@ export default function Result_Evaluateur() {
 
             } else {
                 const data = await response.json();
-                setResult(data);
-                console.log('result======>', result)
+                setResult(data.users);
+                console.log('resultssssssss======>', result)
                 let foo = [];
                 let res = []
                 for (var i = 0; i < data.users.length; i++) {
@@ -52,8 +52,14 @@ export default function Result_Evaluateur() {
         <>
             <AdminNav/>
             <div className="flex justify-center">
-                <div style={{width:900, display: 'flex', justifyContent: 'center', alignItems: 'center', alignContent: 'center'}}>
-                    <h3>Nombre total de votants :</h3>
+                <h3>Nombre total de votants :</h3>
+                <div style={{
+                    width: 900,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    alignContent: 'center'
+                }}>
                     <Bar
                         data={data}
                         options={{
