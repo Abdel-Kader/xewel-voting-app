@@ -79,67 +79,67 @@ export default function Evaluation() {
         return (
             <>
                 <Nav/>
-            <div className="md:container flex justify-center">
-                <div className="sm:w-full md:w-5/12 lg:w-5/12">
-                    <div className="text-center">
-                        <Image src="/../public/logo.jpg" width={200} height={200}/>
-                    </div>
-                    <div className="border-2 p-4" style={{marginBottom: 50}}>
+                <div className="md:container flex justify-center">
+                    <div className="sm:w-full md:w-5/12 lg:w-5/12">
+                        <div className="text-center">
+                            <Image src="/../public/logo.jpg" width={200} height={200}/>
+                        </div>
+                        <div className="border-2 p-4" style={{marginBottom: 50}}>
 
-                        {!vide ?
-                            <>
-                                <h1 className="text-xl h-16"><strong>Note : </strong>Choisissez votre meilleur évaluateur
-                                </h1>
-                                {
-                                    orateurs.map(value => (
-                                        <div className="rounded border-2 sm:w-full mb-8" key={value.id}>
-                                            <div className="flex items-center h-12">
-                                                {/*<input type="radio" name="kad" value="kad" id="kad" onChange={change} />*/}
-                                                <input
-                                                    id={value.id}
-                                                    value={value}
-                                                    name="platform"
-                                                    type="radio"
-                                                    className="w-14 h-5"
-                                                    onChange={()=>change(value)}
-                                                />
-                                                <label htmlFor="vote" className='text-xl'>{value.nom}</label>
+                            {!vide ?
+                                <>
+                                    <h1 className="text-xl h-16"><strong>Note : </strong>Choisissez votre meilleur évaluateur
+                                    </h1>
+                                    {
+                                        orateurs.map(value => (
+                                            <div className="rounded border-2 sm:w-full mb-8" key={value.id}>
+                                                <div className="flex items-center h-12">
+                                                    {/*<input type="radio" name="kad" value="kad" id="kad" onChange={change} />*/}
+                                                    <input
+                                                        id={value.id}
+                                                        value={value}
+                                                        name="platform"
+                                                        type="radio"
+                                                        className="w-14 h-5"
+                                                        onChange={()=>change(value)}
+                                                    />
+                                                    <label htmlFor="vote" className='text-xl'>{value.nom}</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                    ))
-                                }
-                                <br/>
-                                {
-                                    (localStorage.getItem('vot_eval') && localStorage.getItem('date_eval') == date ) ?
-                                        <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                                            <div style={{color: 'green'}}>
-                                                Votre vote a été pris en compte !
+                                        ))
+                                    }
+                                    <br/>
+                                    {
+                                        (localStorage.getItem('vot_eval') && localStorage.getItem('date_eval') == date ) ?
+                                            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                                                <div style={{color: 'green'}}>
+                                                    Votre vote a été pris en compte !
+                                                </div>
+                                                {/*<div>*/}
+                                                {/*    <Link href='/improvisation'>*/}
+                                                {/*        <a style={{color:'royalblue', textDecoration:'underline'}}>Prochain vote--></a>*/}
+                                                {/*    </Link>*/}
+                                                {/*</div>*/}
                                             </div>
-                                            <div>
-                                                <Link href='/improvisation'>
-                                                    <a style={{color:'royalblue', textDecoration:'underline'}}>Prochain vote--></a>
-                                                </Link>
+                                            :
+                                            <div className="flex justify-items-end">
+                                                <div className="rounded border-2 h-10 border-[#3490DC] m-4 bg-[#3490DC] w-auto">
+                                                    <button className="text-white w-full text-xl px-12" onClick={submit}>Valider</button>
+                                                </div>
                                             </div>
-                                        </div>
-                                        :
-                                        <div className="flex justify-items-end">
-                                            <div className="rounded border-2 h-10 border-[#3490DC] m-4 bg-[#3490DC] w-auto">
-                                                <button className="text-white w-full text-xl px-12" onClick={submit}>Valider</button>
-                                            </div>
-                                        </div>
-                                }
-                            </>
-                            :
-                            <div className="flex justify-center rounded h-10"
-                                 style={{backgroundColor: "#c82333", color: '#fff', alignItems: 'center'}}>
-                                Aucun enregistrement trouvé !
-                            </div>
-                        }
+                                    }
+                                </>
+                                :
+                                <div className="flex justify-center rounded h-10"
+                                     style={{backgroundColor: "#c82333", color: '#fff', alignItems: 'center'}}>
+                                    Aucun enregistrement trouvé !
+                                </div>
+                            }
 
 
+                        </div>
                     </div>
                 </div>
-            </div>
                 <br/>
                 <div className="flex items-center justify-center flex-wrap bg-teal p-4 bg-primaire" style={{position: 'fixed', width: '100%',  bottom: 0}}>
                     <p style={{display: 'flex', justifyContent: 'center', color:'#fff'}}>
@@ -163,7 +163,7 @@ export default function Evaluation() {
                             :
                             <div className="flex justify-center rounded h-10"
                                  style={{backgroundColor: "#c82333", color: '#fff', alignItems: 'center'}}>
-                                Aucun enregistrement trouvé !
+                                Aucun candidat trouvé !
                             </div>
                         }
 

@@ -117,7 +117,7 @@ export default function Home() {
 												Votre vote a été pris en compte !
 											</div>
 											<div>
-												<Link href='/evaluation'>
+												<Link href='/improvisation'>
 													<a style={{color:'royalblue', textDecoration:'underline'}}>Prochain vote--></a>
 												</Link>
 											</div>
