@@ -53,7 +53,7 @@ export default function Result_Evaluateur() {
         <>
             <AdminNav/>
             <div className="flex justify-center">
-                <h2 style={{textAlign: 'center'}}>Nombre total de votants :</h2>
+                <h2 style={{textAlign: 'center'}}>Nombre total de votants : {result}</h2>
                 <br/>
                 <br/>
                 <br/>
