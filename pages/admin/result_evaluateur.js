@@ -22,6 +22,7 @@ export default function Result_Evaluateur() {
             } else {
                 const data = await response.json();
                 setResult(data);
+                console.log('result======>', result)
                 let foo = [];
                 let res = []
                 for (var i = 0; i < data.users.length; i++) {
