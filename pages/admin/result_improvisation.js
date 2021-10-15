@@ -17,7 +17,7 @@ export default function Result_Improvisation() {
     }, [])
 
     async function getOrateursNb() {
-        const response = await fetch("/api/users/votant?type=1");
+        const response = await fetch("/api/users/votant?type=3");
         if (response.ok) {
             if (response.status === 204) {
 

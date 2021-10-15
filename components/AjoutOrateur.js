@@ -55,7 +55,7 @@ export default function AjoutOrateur() {
                     <Image src="/logo.jpg" width={200} height={200}/>
                 </div>
                 <div className="border-2 w-full p-4">
-                    <h1 className="text-xl h-16"><strong>Note : </strong>Ajout d'un orateur</h1>
+                    <h1 className="text-xl h-16"><strong>Note : </strong>Formulaire d'ajout</h1>
 
                         <div className="w-full">
                             <label>Nom et prénom</label>
