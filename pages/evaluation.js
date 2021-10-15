@@ -1,6 +1,5 @@
 import Image from "next/image";
 import {useEffect, useState} from "react";
-import Link from "next/link";
 import {Nav} from "../components/Nav";
 
 export default function Evaluation() {
@@ -52,12 +51,6 @@ export default function Evaluation() {
 
 
     async function getOrateurs() {
-        // console.log(localStorage.getItem('vot_or'))
-        const ip = await fetch('https://api.db-ip.com/v2/free/self')
-        // console.log('ip address', ip.ipAddress)
-        // const res = await ip.json()
-        // console.log('ip address', res.ipAddress)
-        // setIp(res.ipAddress)
         const response = await fetch("/api/users?type=2");
         if(response.ok) {
             if (response.status === 204) {

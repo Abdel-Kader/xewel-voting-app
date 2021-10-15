@@ -32,6 +32,9 @@ export const AdminNav = () => (
         </div>
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         	<div className="text-sm lg:flex-grow">
+				<Link href='/admin/ajout'>
+					<a className="pl:50" style={{color: '#fff', marginRight: 50}}>Ajouter un utilisateur</a>
+				</Link>
 				<Link href='/admin/result_orateur'>
 					<a className="pl:50" style={{color: '#fff', marginRight: 50}}>Meilleur orateur</a>
 				</Link>
