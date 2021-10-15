@@ -1,6 +1,7 @@
 import {NextApiRequest, NextApiResponse} from "next";
 import {PrismaClient} from "@prisma/client"
 
+
 export default async function (req: NextApiRequest, res: NextApiResponse) {
     const prisma = new PrismaClient({log: ['query']});
 
@@ -8,14 +9,10 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     const date = new Date().toISOString().substr(0, 10).replace('T', ' ');
     try {
         if (typeof type == "string") {
-            const users = await prisma.voting.groupBy({
-                by: ['nom'],
+            const users = await prisma.voting.findMany({
                 where: {
                     type: parseInt(type),
                     dateSeance: date
-                },
-                _sum: {
-                    voix: true
                 }
             });
             if (users.length > 0) {

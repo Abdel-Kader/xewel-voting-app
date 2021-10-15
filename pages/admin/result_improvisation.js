@@ -6,17 +6,32 @@ export default function Result_Improvisation() {
 
     const [result, setResult] = useState();
     const [data, setData] = useState()
+    const [nb, setNb] = useState()
 
-    useEffect(()=> {
+    useEffect(() => {
         getOrateurs()
+        getOrateursNb()
         // if(result != undefined) {
         //
         // }
     }, [])
 
+    async function getOrateursNb() {
+        const response = await fetch("/api/users/votant?type=1");
+        if (response.ok) {
+            if (response.status === 204) {
+
+            } else {
+                const data = await response.json();
+                // alert(JSON.stringify())
+                setNb(data.users.length)
+            }
+        }
+    }
+
     async function getOrateurs() {
         const response = await fetch("/api/users/result?type=3");
-        if(response.ok) {
+        if (response.ok) {
             if (response.status === 204) {
 
             } else {
@@ -50,12 +65,24 @@ export default function Result_Improvisation() {
     return (
         <>
             <AdminNav/>
-            <div className="flex justify-center">
-                <div style={{width:900, display: 'flex', justifyContent: 'center', alignItems: 'center', alignContent: 'center'}}>
+            <div style={{marginTop: 30}}>
+
+                {nb > 0 ?
+                    <label className="text-xl text-center underline" style={{textAlign: 'center', marginLeft: '50%'}}>Nombre
+                        de votant : {nb}</label> : null}
+                <div style={{
+                    width: 900,
+                    display: 'flex',
+                    marginLeft: '25%',
+                    marginTop: 50,
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    alignContent: 'center'
+                }}>
                     <Bar
                         data={data}
                         options={{
-                            responsive:true,
+                            responsive: true,
                             label: false,
                         }}
                     />

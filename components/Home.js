@@ -55,12 +55,6 @@ export default function Home() {
 
 
 	async function getOrateurs() {
-		// console.log(JSON.parse(localStorage.getItem('vot_or')))
-		const ip = await fetch('https://api.db-ip.com/v2/free/self')
-		// console.log('ip address', ip.ipAddress)
-		// const res = await ip.json()
-		// console.log('ip address', res.ipAddress)
-		// setIp(res.ipAddress)
 		const response = await fetch("/api/users?type=1");
 		if(response.ok) {
 			if (response.status === 204) {

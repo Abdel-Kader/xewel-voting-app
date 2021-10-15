@@ -1,8 +1,8 @@
 import "tailwindcss/tailwind.css";
 import Head from "next/head";
-import { Nav } from "../../components/Nav";
-import AjoutOrateur from "../../components/AjoutOrateur";
 import {AdminNav} from "../../components/AdminNav";
+import Homea from "../../components/Homea";
+
 export default function Home() {
     return (
         <div>
@@ -13,9 +13,10 @@ export default function Home() {
 
             {/* Header */}
 
-            <AdminNav />
+            <AdminNav/>
 
-            <AjoutOrateur />
+            <Homea/>
+            {/*<AjoutOrateur />*/}
         </div>
     );
 }
